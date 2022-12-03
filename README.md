@@ -1,22 +1,32 @@
-# Laboratorio4
-modulo8-lab4
+# Instrucciones para ejecutar
 
-Requisitos
+### Requisitos
 El docker-compose.yml del laboratorio 4 usa repositorios docker desde nexus, para lo cual se necesita los siguientes requisitos:
 
-Iniciar el servidor nexus
+1. Iniciar el servidor nexus
+```
 $ docker compose up -d nexus
-Configurar docker hosted en los repositorios nexus
-Permitir acceso sin autenticación
-Se debe generar la imagen del repositorio frontend-docker
-Se debe generar la imagen del repositorio backen-docker
-Subirl la imagenes al servidor nexus.
-Orden de inicio de los servicios
-Levantar servidor nexus
+```
+2. Configurar docker hosted en los repositorios nexus
+3. Permitir acceso sin autenticación
+4. Se debe generar la imagen del repositorio [frontend-docker](https://github.com/stephanieLQ/frontend-docker)
+5. Se debe generar la imagen del repositorio [backen-docker](https://github.com/stephanieLQ/backend-docker)
+6. Subirl la imagenes al servidor nexus.
+
+### Orden de inicio de los servicios
+1. Levantar servidor nexus
+```
 $ docker compose up -d nexus
-Levantar servicio mongo
+```
+2. Levantar servicio mongo
+```
 $ docker compose up -d mongo
-Levantar servicio backend
+```
+3. Levantar servicio backend
+```
 $ docker compose up -d backend
-Levantar servicio frontend
+```
+4. Levantar servicio frontend
+```
 $ docker compose up -d frontend
+```
